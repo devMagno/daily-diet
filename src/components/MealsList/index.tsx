@@ -1,3 +1,5 @@
+import { useNavigation } from "@react-navigation/native"
+
 import { MealsListItem } from "../MealsListItem"
 import { MealsListItemHeader } from "../MealsListItemHeader"
 
@@ -14,6 +16,8 @@ import {
 } from "./styles"
 
 export function MealsList() {
+  const { navigate } = useNavigation()
+
   const meals = [
     {
       title: "12.11.2022",
@@ -42,10 +46,14 @@ export function MealsList() {
     },
   ]
 
+  function handleNewMealButtonClick() {
+    navigate("new")
+  }
+
   return (
     <Container>
       <Title>Refeições</Title>
-      <Button>
+      <Button onPress={handleNewMealButtonClick}>
         <ButtonIcon />
         <ButtonLabel>Nova refeição</ButtonLabel>
       </Button>

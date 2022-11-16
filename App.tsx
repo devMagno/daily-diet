@@ -6,7 +6,7 @@ import {
 } from "@expo-google-fonts/nunito-sans"
 import { StatusBar } from "expo-status-bar"
 
-import { Home } from "./src/screens/Home"
+import { Routes } from "./src/routes"
 
 import { Loading } from "./src/components/Loading"
 
@@ -19,7 +19,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <StatusBar style="auto" />
 
-      {fontsLoaded ? <Home /> : <Loading />}
+      {fontsLoaded ? <Routes /> : <Loading />}
     </ThemeProvider>
   )
 }

@@ -4,7 +4,7 @@ interface DotStyleProps {
   isWithinTheDiet: boolean
 }
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity`
   flex: 1;
   flex-direction: row;
   align-items: center;
@@ -49,5 +49,5 @@ export const Dot = styled.View<DotStyleProps>`
   border-radius: 14px;
 
   background-color: ${({ theme, isWithinTheDiet }) =>
-    isWithinTheDiet ? theme.COLORS.GREEN_LIGHT : theme.COLORS.RED_LIGHT};
+    isWithinTheDiet ? theme.COLORS.GREEN_MID : theme.COLORS.RED_MID};
 `
